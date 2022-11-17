@@ -2,9 +2,12 @@
 #include <math.h>
 int main()
 {
-    int a;
-
-    scanf("%i", &a);
-
+    double x;
     
+    scanf("%lf", &x);
+    
+
+    double obliczenia=(x*3.14)/180;
+    printf("%.2lf", obliczenia);
 }
+
