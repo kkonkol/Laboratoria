@@ -1,19 +1,28 @@
 #include <stdio.h>
 int n=100;
 void prog1(int tab[n]){
-    if(n==0)
+    int x=0;
+    for(int i=0;i<n;i++)
     {
-        printf("Tablica nie ma żadnego znaku.\n");
-        return 0;
+        if(tab[n]=='\0')
+        {
+            x++;
+            if(x==n)
+            {
+                printf("Tablica nie ma żadnego znaku.\n");
+            }
+        }
+        else{
+            printf("%i",tab[i]);
+            printf(", ");
+        }
+        return ;
     }
-    for(int i=0;i<n;i++){
-        printf("%i", tab[i]);
-    }
-    return 0;
 }
 void prog2(int tab[n],int liczba){
+    scanf("%i",&liczba);
     for(int i=0;i<n;i++){
-        if (tab[i]==NULL)
+        if (tab[i]=='\0')
         {
             tab[i]==liczba;
         }
@@ -21,8 +30,9 @@ void prog2(int tab[n],int liczba){
         {
             printf("Liczba jest niepoprawna lub wszystkie miejsca sa wykorzystane.\n");
         }
+        return ;
     }
-    return liczba;
+
 }
 int main(){
     char tab[n];
@@ -38,17 +48,18 @@ int main(){
     switch (x)
     {
     case 0:
+        printf("See you soon.\n");
         return 0;
     case 1:
         prog1(tab[n]);
     case 2:
-        scanf("%i",&liczba);
         prog2(tab[n],liczba);
     case 3:
-
+    
     default:
+        printf("\n");
         printf("Operacja jest niemozliwa, wybierz jeszcze raz.\n");
+        printf("\n");
     }
-
     }
 }
