@@ -24,6 +24,7 @@ void prog2(int tab[n],int liczba){
     for(int i=0;i<n;i++){
         if (tab[i]=='\0')
         {
+
             tab[i]==liczba;
         }
         else 
